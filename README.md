@@ -4,8 +4,9 @@ This repo shows how to create a RHEL7 VM using Vagrant and VirtualBox that is au
 
 ## Requirements
 
-- VirtualBox: tested with 6.1.50
-- Vagrant: tested with 2.4.1
+- [VirtualBox](https://www.virtualbox.org/): tested with version 6.1.50
+- [Vagrant](https://www.vagrantup.com/): tested with version 2.4.1
+- A RedHat developers subscription: to get one visit the [RedHat developer site](https://developers.redhat.com/?source=sso) and click on 'Join Red Hat Developer'
 
 ## Usage
 
