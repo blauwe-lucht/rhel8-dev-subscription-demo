@@ -1,6 +1,6 @@
-# RHEL 7 developer subscription demo
+# RHEL 8 developer subscription demo
 
-This repo shows how to create a RHEL7 VM using Vagrant and VirtualBox that is automatically registered with a Red Hat developer subscription.
+This repo shows how to create a RHEL8 VM using Vagrant and VirtualBox that is automatically registered with a Red Hat developer subscription.
 
 ## Requirements
 

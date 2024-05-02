@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
-    config.vm.define "rhel7" do |rhel7|
-        rhel7.vm.box = "generic/rhel7"
+    config.vm.define "rhel8" do |rhel8|
+        rhel8.vm.box = "generic/rhel8"
 
         rh_user = ENV['RH_USER']
         rh_pass = ENV['RH_PASS']
@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
         end
 
         # Provision script to register this VM with the RHEL subscription.
-        rhel7.vm.provision "shell" do |shell|
+        rhel8.vm.provision "shell" do |shell|
             shell.inline = <<-SHELL
                 echo 'Registering the system to Red Hat Subscription Management'
                 subscription-manager register --username #{rh_user} --password #{rh_pass} --auto-attach
@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
         end
 
         # Use the trigger feature to deregister when destroying the VM.
-        rhel7.trigger.before :destroy do |trigger|
+        rhel8.trigger.before :destroy do |trigger|
             trigger.name = "Deregistering RHEL"
             trigger.run = { inline: "vagrant ssh -c 'sudo subscription-manager unregister'" }
         end
